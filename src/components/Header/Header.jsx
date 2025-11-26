@@ -9,15 +9,17 @@ function Header(){
 				<input type="text" className={style.input} placeholder="поиск курсов" />
 			</div>
 			<div className={style.GLS}>
-				<div className={style.loginup}>
-					<button className={style.LS}>Loginup</button>
-				</div>
-				<div className={style.singup}>
-					<button className={style.LS}>Signup</button>
+				<div className={style.TLS}>
+					<div className={style.loginup}>
+						<button className={style.LS}>LoginUp</button>
+					</div>
+					<div className={style.singup}>
+						<button className={style.LS}>SignUp</button>
+					</div>
 				</div>
 				<div className={style.profile}>
 					<button className={style.pro}>
-						<img src={profile} className={style.icon} />
+						<img src={profile} className={style.proicon} />
 					</button>
 				</div>
 			</div>
