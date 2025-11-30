@@ -4,6 +4,7 @@ import style from "./CreateCourse.module.css"
 
 function CreateCourse(){
 	const [image, setImage] = useState(null)
+	const [valueT, setValueT] = useState("")
 
 	function imageUpLoad(e){
 		const file = e.target.files[0]
@@ -15,22 +16,34 @@ function CreateCourse(){
 	return(
 		<>
 			<Header />
-			<input
-			className={style.inputImg}
-			type="file"
-			id="file"
-			accept="image/*"
-			onChange={imageUpLoad}
-			/>
+			<div className={style.img_title}>
+				<input
+				className={style.inputImg}
+				type="file"
+				id="file"
+				accept="image/*"
+				onChange={imageUpLoad}
+				/>
 
-			<label className={style.formUpload} htmlFor="file">
-			{image ? (
-				<img src={image} alt="preview" className={style.imageOnButton} />
-			) : (
-				"Upload File"
-			)}
-			</label>
-			
+				<label className={style.formUpload} htmlFor="file">
+				{image ? (
+					<img src={image} alt="preview" className={style.imageOnButton} />
+				) : (
+					"Upload File"
+				)}
+				</label>
+				<div className={style.box_title}>
+					<div className={style.courseTitlePreview}>{valueT}</div>
+
+					<input 
+						className={style.title_course}
+						type="text"
+						placeholder="Как назовешь свой курс?"
+						value={valueT}
+						onChange={e => setValueT(e.target.value)}
+					/>
+				</div>
+			</div>
 		</>
 	)
 	

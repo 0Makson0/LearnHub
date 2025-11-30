@@ -1,10 +1,11 @@
 import style from "./Header.module.css"
 import profile from "../../assets/profile.webp"
+import { Link } from "react-router-dom";
 
 function Header(){
 	return(
 		<div className={style.header}>
-			<div className={style.logo}></div>
+			<Link to="/"><div className={style.logo}></div></Link>
 			<div className={style.search}>
 				<input type="text" className={style.input} placeholder="поиск курсов" />
 			</div>
