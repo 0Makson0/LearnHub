@@ -1,0 +1,44 @@
+* {
+	margin: 0%;
+	padding: 0%;
+}
+
+.header {
+	padding: 0px 20px;
+	height: 70px;
+	background-color: rgb(255, 196, 141);
+	display: flex;
+	justify-content: space-between;
+    align-items: center;
+}
+
+.left_H {
+	display: flex;
+	align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+/* .logo {
+
+} */
+
+.name_logo {
+	font-size: 20px;
+	font-family: "Comfortaa", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 700;
+	font-style: normal;
+
+}
+
+
+.rigth_H {
+	display: flex;
+	gap: 30px;
+	margin-right: 50px;
+}
+
+.catalog, .my_course, .profile {
+	font-size: 18px;
+}
