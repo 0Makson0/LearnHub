@@ -7,9 +7,6 @@ function Home(){
 	return (
 		<>
 			<Header />
-			<div className={style.startButton}>
-	
-			</div>
 		</>
 	)
 }

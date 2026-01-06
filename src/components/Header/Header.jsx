@@ -1,28 +1,40 @@
-import style from "./Header.module.css"
-import { Link } from "react-router-dom";
-import { BookOpen } from 'lucide-react';
-import Input from "./InputSearch";
+import React, { useState, useEffect } from "react";
+import style from "./Header.module.css";
+import logo from "../../assets/logo.svg";
+import Switch from "./Switch";
 
+function Header() {
 
-function Header(){
-	return(
-		<header>
-			<div className={style.header}>
-				<div className={style.left_H}>
-					<div className={style.logo}>
-						<BookOpen size={40} color="#0062ff" strokeWidth={2} />
-					</div>
-					<div className={style.name_logo}>LearnHub</div>
-				</div>
-				<Input />
-				<div className={style.rigth_H}>
-					<div className={style.catalog}>Каталог</div>
-					<div className={style.my_course}>Курсы</div>
-					<div className={style.profile}>Профиль</div>
-				</div>
-			</div>
-		</header>
-	)
+	const [isOn, setIsOn] = useState(() => {
+		return window.matchMedia("(prefers-color-scheme: dark)").matches
+	})
+	useEffect(() => {
+		if (isOn) {
+			document.documentElement.setAttribute("data-theme", "dark");
+		} else {
+			document.documentElement.setAttribute("data-theme", "light");
+	}
+	}, [isOn])
+   
+    return (
+        <header>
+            <div className={style.header} style={{ backgroundColor: 'var(--header-bg)'}}>
+                <div className={style.left_header}>
+                    <div className={style.logo_container}>
+                        <img src={logo} className={style.logo} alt="LearnHub Logo" />
+                    </div>
+                    <div className={style.name_logo}>LearnHub</div>
+                </div>
+                <div className={style.rigth_header}>
+                    <div className={style.courses}>Мої курси</div>
+                    <div className={style.profile}>Профіль</div>
+                    <div className={style.option_tema}>
+                        <Switch checked={isOn} onChange={() => setIsOn(!isOn)}  />
+                    </div>
+                </div>
+            </div>
+        </header>
+    );
 }
 
 export default Header;
