@@ -6,14 +6,23 @@ import Switch from "./Switch";
 function Header() {
 
 	const [isOn, setIsOn] = useState(() => {
+		const savedStatus = localStorage.getItem("data-theme");
+
+		if (savedStatus !== null) {
+			return savedStatus === "false";
+  		}
 		return window.matchMedia("(prefers-color-scheme: dark)").matches
 	})
 	useEffect(() => {
 		if (isOn) {
 			document.documentElement.setAttribute("data-theme", "dark");
+			localStorage.setItem("data-theme", "false")
+	
 		} else {
 			document.documentElement.setAttribute("data-theme", "light");
-	}
+			localStorage.setItem("data-theme", "true")
+	
+		}
 	}, [isOn])
    
     return (

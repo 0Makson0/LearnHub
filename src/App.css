@@ -2,26 +2,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Inria+Serif&display=swap');
 
 body {
-  font-family: "Inria Serif", serif;
+  	font-family: "Inria Serif", serif;
 }
 
-/* Цвета по умолчанию (Светлая тема) */
 :root {
-  --bg-color: #A1C6F6;
-  --text-color: #000000;
-  --header-bg: #499BEDE5;
+	--bg-color: #A1C6F6;
+	--text-color: #000000;
+	--header-bg: #499BEDE5;
 }
 
-/* Цвета для темной темы */
 [data-theme='dark'] {
-  --bg-color: #022E5B;
-  --text-color: #ffffff;
-  --header-bg: #A1C6F6CC;
+	--bg-color: #022E5B;
+	--text-color: #ffffff;
+	--header-bg: #A1C6F6CC;
 }
 
-/* Применяем переменные ко всем элементам */
 body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
+	background-color: var(--bg-color);
+	color: var(--text-color);
+	transition: background-color 0.3s ease, color 0.3s ease;
 }
