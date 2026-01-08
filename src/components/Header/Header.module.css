@@ -22,7 +22,7 @@
 }
 
 .logo {
-	padding: 5px 10px;
+	padding: 5npm px 10px;
 	width: 80px;
 	height: 60px;
 	border-radius: 14px;
@@ -43,7 +43,7 @@
 	letter-spacing: 0;
 }
 
-.rigth_header {
+.right_header {
 	display: flex;
 	align-items: center;
 }

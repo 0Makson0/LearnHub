@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Switch.module.css'; // Импорт как модуля
+import styles from './Switch.module.css';
 
 const Switch = ({ checked, onChange }) => {
   return (

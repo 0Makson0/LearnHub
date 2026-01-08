@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom"
 import style from "./Header.module.css";
 import logo from "../../assets/logo.svg";
 import Switch from "./Switch";
@@ -8,7 +9,7 @@ function Header() {
 	const [isOn, setIsOn] = useState(() => {
 		const savedStatus = localStorage.getItem("data-theme");
 
-		if (savedStatus !== null) {
+		if (savedStatus !== true) {
 			return savedStatus === "false";
   		}
 		return window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -32,10 +33,10 @@ function Header() {
                     <div className={style.logo_container}>
                         <img src={logo} className={style.logo} alt="LearnHub Logo" />
                     </div>
-                    <div className={style.name_logo}>LearnHub</div>
+                    <div className={style.name_logo}><Link to="/">LearnHub</Link></div>
                 </div>
-                <div className={style.rigth_header}>
-                    <div className={style.courses}>Мої курси</div>
+                <div className={style.right_header}>
+                    <div className={style.courses}><Link to="/courses">Мої курси</Link></div>
                     <div className={style.profile}>Профіль</div>
                     <div className={style.option_tema}>
                         <Switch checked={isOn} onChange={() => setIsOn(!isOn)}  />
