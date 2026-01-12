@@ -1,0 +1,51 @@
+.in_home_page {
+	margin: 80px 60px 0px 60px;
+}
+
+.main_text {
+	font-size: calc(80px * var(--h-scale));
+	line-height: 1;
+	color: var(--h1);
+}
+
+.text_photo {
+	display: flex;
+}
+
+.left_main_text {
+	display: flex;
+	flex-direction: column;
+	width: 500px;
+}
+
+.description_text {
+	color: var(--main-color);
+	overflow-wrap: anywhere;
+	font-size: 25px;
+	width: 400px;
+	height: auto;
+	margin-top: 40px;
+	margin-left: 5px;
+}
+
+.main_buttons {
+	margin-top: 30px;
+	display: flex;
+	width: 450px;
+	gap: 50px
+}
+
+.main_button {
+	color: var(--accent-dark);
+	padding: 5px 30px;
+	background-color: #499BED;
+	border-radius: 20px;
+	font-size: 20px;
+}
+
+.main_photo {
+	margin: -100px 0px 0px 350px;
+    display: flex;
+    max-width: 53%;
+    height: auto;
+}

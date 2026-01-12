@@ -1,24 +1,40 @@
 /* общие стили */
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Inria+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Inria+Serif&family=Ledger&display=swap');
 
-body {
-  	font-family: "Inria Serif", serif;
-}
-
-:root {
-	--bg-color: #A1C6F6;
-	--text-color: #000000;
-	--header-bg: #499BEDE5;
-}
-
-[data-theme='dark'] {
-	--bg-color: #022E5B;
-	--text-color: #ffffff;
-	--header-bg: #A1C6F6CC;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	color: inherit;
 }
 
 body {
+  	font-family: "Ledger", serif;
+	font-weight: 400;
+	font-style: normal;
 	background-color: var(--bg-color);
 	color: var(--text-color);
 	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+:root {
+    --bg-color: #A1C6F6;
+    --header-bg: #499BEDE5;
+    --accent-dark: #022E5B;
+	--h1: #031725;
+	--main-color: #022E5B;
+    --h-scale: 0.8;
+}
+
+[data-theme='dark'] {
+    --bg-color: #022E5B;
+    --header-bg: #A1C6F6CC;
+    --accent-dark: #022E5B;
+	--main-color: #A1C6F6;
+	--h1: #DAEAFF;
+}
+
+input, button  {
+    font-family: "Ledger", serif !important;
 }

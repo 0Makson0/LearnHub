@@ -35,12 +35,15 @@ function Header() {
                     </div>
                     <div className={style.name_logo}><Link to="/">LearnHub</Link></div>
                 </div>
+				<div className={style.input}>
+					<input type="search" 
+						   placeholder="Пошук курсів, авторів, тем…" 
+						   className={style.in_input} />
+				</div>
                 <div className={style.right_header}>
                     <div className={style.courses}><Link to="/courses">Мої курси</Link></div>
-                    <div className={style.profile}>Профіль</div>
-                    <div className={style.option_tema}>
-                        <Switch checked={isOn} onChange={() => setIsOn(!isOn)}  />
-                    </div>
+                    <Link><div className={style.profile}>Профіль</div></Link>
+                    <Switch checked={isOn} onChange={() => setIsOn(!isOn)}  />
                 </div>
             </div>
         </header>
